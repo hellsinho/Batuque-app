@@ -150,29 +150,30 @@ H, W = frame.shape[:2]
 
 kernel = np.ones((7, 7), np.uint8)
 
-Chimbal = cv2.resize(cv2.imread('./Images/Chimbal.png'), (200, 100), interpolation=cv2.INTER_CUBIC)
-Caixa = cv2.resize(cv2.imread('./Images/Caixa.png'), (200, 100), interpolation=cv2.INTER_CUBIC)
-Bumbo = cv2.resize(cv2.imread('./Images/Bumbo.png'), (200, 100), interpolation=cv2.INTER_CUBIC)
-Crash = cv2.resize(cv2.imread('./Images/Crash.png'), (200, 100), interpolation=cv2.INTER_CUBIC)
+Chimbal = cv2.resize(cv2.imread('./Images/Chimbal.png'), (200, 200), interpolation=cv2.INTER_CUBIC)
+Caixa = cv2.resize(cv2.imread('./Images/Caixa.png'), (200, 150), interpolation=cv2.INTER_CUBIC)
+Bumbo = cv2.resize(cv2.imread('./Images/Bumbo.png'), (200, 200), interpolation=cv2.INTER_CUBIC)
+Crash = cv2.resize(cv2.imread('./Images/Crash.png'), (200, 200), interpolation=cv2.INTER_CUBIC)
+
 
 Chimbal_center = [W * 1 // 8, H * 4 // 8]
 Caixa_center = [W * 6 // 8, H * 6 // 8]
 Bumbo_center = [W * 2 // 8, H * 6 // 8]
 Crash_center = [W * 7 // 8, H * 4 // 8]
 
-Chimbal_thickness = [200, 100]
+Chimbal_thickness = [200, 200]
 Chimbal_top = [Chimbal_center[0] - Chimbal_thickness[0] // 2, Chimbal_center[1] - Chimbal_thickness[1] // 2]
 Chimbal_btm = [Chimbal_center[0] + Chimbal_thickness[0] // 2, Chimbal_center[1] + Chimbal_thickness[1] // 2]
 
-Crash_thickness = [200, 100]
+Crash_thickness = [200, 200]
 Crash_top = [Crash_center[0] - Crash_thickness[0] // 2, Crash_center[1] - Crash_thickness[1] // 2]
 Crash_btm = [Crash_center[0] + Crash_thickness[0] // 2, Crash_center[1] + Crash_thickness[1] // 2]
 
-Caixa_thickness = [200, 100]
+Caixa_thickness = [200, 150]
 Caixa_top = [Caixa_center[0] - Caixa_thickness[0] // 2, Caixa_center[1] - Caixa_thickness[1] // 2]
 Caixa_btm = [Caixa_center[0] + Caixa_thickness[0] // 2, Caixa_center[1] + Caixa_thickness[1] // 2]
 
-Bumbo_thickness = [200, 100]
+Bumbo_thickness = [200, 200]
 Bumbo_top = [Bumbo_center[0] - Bumbo_thickness[0] // 2, Bumbo_center[1] - Bumbo_thickness[1] // 2]
 Bumbo_btm = [Bumbo_center[0] + Bumbo_thickness[0] // 2, Bumbo_center[1] + Bumbo_thickness[1] // 2]
 
