@@ -4,6 +4,7 @@ import cv2
 import time
 from pygame import mixer
 
+
 def run_batuque():
     # Configurações de dimensão da janela da câmera
     width = 1920
@@ -80,7 +81,8 @@ def run_batuque():
         if not ret:
             break
         frame = cv2.flip(frame, 1)
-        cv2.putText(frame, 'Projeto: Batuque', (10, 30), 2, 0.5, (20, 20, 20), 2)
+        cv2.putText(frame, 'Pressione "q" para sair', (10, 30), 2, 0.5, (20, 20, 20), 2)
+        #cv2.putText(frame, 'Projeto: Batuque', (10, 30), 2, 0.5, (20, 20, 20), 2)
 
         for i, (top_x, top_y, bottom_x, bottom_y) in enumerate(ROIs):
             roi = frame[top_y:bottom_y, top_x:bottom_x]
